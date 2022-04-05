@@ -87,11 +87,11 @@ class LoggedIn extends React.Component {
 
     //loading contracts
     const networkId = await web3.eth.net.getId();
-    const networkData = Loyalty.networks[networkId];
+    const networkData = Loyalty.networks[networkId]; //contract_name to be changed as per contract
 
     //contract Integation
     // if (networkData) {
-    //   const abi = contract_name.abi;
+    //   const abi = Loyalty.abi;
     //   const address = networkData.address;
     //   const contract = new web3.eth.Contract(abi, address);
     //   this.setState({ contract: contract }); //this.setState({ contract}) //ES6
