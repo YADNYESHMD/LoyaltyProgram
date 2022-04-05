@@ -1,0 +1,50 @@
+.navbar {
+    background:#00034e;
+  }
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    display: none;
+    float: left;
+    min-width: 0rem;
+    padding: 0.5rem;
+    margin: 0.1rem;
+    font-size: 0.9rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 0.25rem;
+  }
+  .nav-link,
+  .navbar-brand {
+    color: #fff;
+  }
+  .navbar-brand:hover{
+    text-decoration: none;
+    color: #fff;
+  }
+  .nav-link {
+    margin-right: 1em !important;
+  }
+  .nav-link:focus{
+    color: white;
+  }
+  .nav-link:hover {
+    color: #ffc107;
+  }
+  .active {
+    color:#ffc107
+  }
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+  .navbar-address {
+    font-size: 16px;
+    color: white;
+    padding: 8px;
+  }

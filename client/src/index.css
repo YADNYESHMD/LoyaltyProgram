@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+section {
+  margin-left: 20rem;
+  margin-top: 3rem;
+  margin-right: 2rem;
+}
+
+.form-fields {
+}
+
+.sf-table {
+  margin: 2rem 0;
+}
+.sf-table > .table-head {
+  font-size: 25px;
+  font-weight: 600;
+  color: #3e3e3e;
+  margin-bottom: 0.8rem;
+}
+
+.css-levciy-MuiTablePagination-displayedRows,
+.css-pdct74-MuiTablePagination-selectLabel {
+  margin: 0 !important;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: white;
+  box-shadow: 24;
+  border-radius: 2rem;
+}
+
+.css-og52vs-MuiTableCell-root.MuiTableCell-head,
+.css-1wvnaxz-MuiTableCell-root.MuiTableCell-head {
+  background-color: #009d9d !important;
+}
+
+.on-hover {
+  max-width: 4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 500ms ease-in-out;
+}
+.on-hover:hover {
+  max-width: 20rem;
+}
+
+hr {
+  margin-bottom: 1.4rem;
+}
+
+/* GLOBAL STYLES */
+.space-between {
+  justify-content: space-between;
+}
+
+/* SCROLLBAR STYLING */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

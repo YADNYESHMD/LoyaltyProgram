@@ -1,0 +1,11 @@
+.danger {
+  background-color: #d12b2b !important;
+  color: white !important;
+}
+.danger:hover {
+  background-color: #a72121 !important;
+}
+.icon {
+  margin: 0 0.8rem 0 0 !important;
+  padding: 0 !important;
+}

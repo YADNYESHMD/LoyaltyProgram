@@ -1,0 +1,14 @@
+.price-details {
+	display: flex;
+	justify-content: space-between;
+}
+.price-details > p {
+	margin: 0;
+	font-size: 1.2rem;
+}
+.price-details > .label {
+	font-weight: 600;
+}
+.price-details > .value {
+
+}

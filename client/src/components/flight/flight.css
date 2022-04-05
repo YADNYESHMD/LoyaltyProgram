@@ -1,0 +1,81 @@
+
+.page-title__flight {
+  font-size: 30px;
+  font-weight: 600;
+  color: #3e3e3e;
+  margin-bottom: 0.8rem;
+}
+  .booking-row__flight {
+    padding: 20px 40px;
+    box-shadow: 1px 1px 10px #00000036;
+    border-radius: 15px;
+    background: #fff;
+  }
+  .booking-title__flight {
+    font-size: 1.2rem;
+    color: #55bd7e;
+    margin: 0;
+  }
+  .booking-row-internal__flight {
+    display: grid;
+    grid-gap: 1rem;
+    /* https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    margin-bottom: 1.2rem;
+    align-items: center;
+  }
+  .pricing-text {
+    margin: 1rem;
+    padding: 0.3rem 3.7rem;
+    font-size: 20px;
+    color: #55bd7e;
+  }
+  .form-select {
+    display: block;
+    width: 100%;
+    padding: 0.875rem 2.25rem 0.875rem 1rem;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-image: url('../../assets/chevron-down-solid.svg');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 2.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+  .datePicker {
+    display: block;
+    width: 100%;
+    padding: 0.875rem 2.25rem 0.875rem 1rem;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-image: url('../../assets/calendar-alt-solid.svg');
+    background-repeat: no-repeat;
+    background-position: right 1.25rem center;
+    background-size: 16px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 2.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+  }
+
+.book-flight-btn {
+  padding: 1rem 2rem !important;
+  width: fit-content;
+}

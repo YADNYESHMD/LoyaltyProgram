@@ -1,0 +1,72 @@
+.dashboard-name {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.dashboard-account {
+    font-size: 19px;
+}
+.dashboard-account > i {
+    margin: 0 0.5rem 0 1rem;
+}
+
+.recent-container {
+    
+}
+.hotel-card {
+    /* https://www.geeksforgeeks.org/how-to-darken-an-image-using-css/ */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../../assets/hotel.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.flight-card {
+    /* https://www.geeksforgeeks.org/how-to-darken-an-image-using-css/ */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../../assets/flight.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 1.2rem;
+}
+.card-head {
+    color: black;
+    margin: 0 !important;
+}
+.airport-row, .hotel-row {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+.item-row:last-child,
+.hotel-row:last-child {
+    margin: 0;
+}
+.airport-row > .item > i,
+.hotel-row > .item > i {
+    margin: 0 0.5rem;
+}
+.item-row {
+    display: grid;
+    grid-gap: 1rem;
+    /* https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
+    grid-template-columns: repeat( auto-fit, minmax(10rem, 1fr) );
+    margin-bottom: 1.2rem;
+    align-items: center;
+}
+.item-row > .item > i {
+    margin: 0 0.5rem;
+}
+.item {
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.card-heading {
+    color: #002c6e !important;
+    font-weight: 600 !important;
+}
+.icon {
+    margin-right: 0.7rem;
+}

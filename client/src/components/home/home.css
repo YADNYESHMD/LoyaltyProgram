@@ -1,0 +1,82 @@
+.container__homepage {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-box-overlay__homepage {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 10px 6px #d9d9d9;
+  border-radius: 20px;
+  margin: 0 5rem;
+  grid-auto-flow: column;
+  max-height: 60rem;
+  min-height: 32rem;
+  grid-template-columns: 45% 55%;
+  max-width: 60rem;
+}
+
+.header-box__homepage {
+  padding: 4rem 2rem;
+  background-color: #bdaaed;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-primary-text__homepage {
+  font-size: 4rem;
+  font-weight: 600;
+}
+.header-secondary-text__homepage {
+  font-size: 1.5rem;
+}
+.about-us-box__homepage {
+  padding: 3rem 2rem 3rem 2rem;
+}
+.about-us-title__homepage {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #7053b7;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.about-us-text__homepage {
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.button-row {
+  display: flex;
+  grid-gap: 1rem;
+  margin-top: 1rem;
+}
+.login-btn {
+  padding: 1rem 1.7rem;
+}
+
+.login, .register {
+  padding: 4rem;
+}
+
+.login > input,
+.register > input {
+  border-radius: 8px;
+  border: 2px solid #dddfe2;
+  outline: none;
+  color: #1d2129;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  
+}
