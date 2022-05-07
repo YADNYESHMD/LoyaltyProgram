@@ -92,10 +92,10 @@ class LoggedIn extends React.Component {
       const address = networkData.address;
       const contract = new web3.eth.Contract(abi, address);
       this.setState({ contract: contract }); //this.setState({ contract}) //ES6
-      console.log("Contract");
-      console.log(this.state.contract);
-      console.log("Acoount");
-      console.log(this.state.account)
+      // console.log("Contract");
+      // console.log(this.state.contract);
+      // console.log("Acoount");
+      // console.log(this.state.account)
 
     } else {
       window.alert("Smart contract not deployed to detected network");
@@ -104,8 +104,9 @@ class LoggedIn extends React.Component {
   
 //contract function call
 	//bookflight
-  bookFlight = (amount) => {
-    this.state.contract.methods.bookFlight(amount,this.state.account).send({from: this.state.account})
+  bookFlight = (reward) => {
+    this.state.contract.methods.bookFlight(reward,this.state.account).send({from: this.state.account})
+    
   }
   //bookhotel
   bookHotel = (token) => {
