@@ -8,6 +8,8 @@ import Sidebar from "../components/sidebar/sidebar";
 import TopBar from "../components/UI/TopBar/TopBar"
 
 //Contract import
+import Loyalty from "../contracts/Loyalty.json";
+
 import Web3 from "web3";
 
 class LoggedIn extends React.Component {
@@ -33,11 +35,6 @@ class LoggedIn extends React.Component {
       ether: 0,
 		}
 	}
-//contract function call
-	//bookflight
-
-  //bookhotel
-
 	componentDidMount = async () => {
     await this.loadUserProfileData();
     await this.loadWeb3();
@@ -90,15 +87,31 @@ class LoggedIn extends React.Component {
     const networkData = Loyalty.networks[networkId]; //contract_name to be changed as per contract
 
     //contract Integation
-    // if (networkData) {
-    //   const abi = Loyalty.abi;
-    //   const address = networkData.address;
-    //   const contract = new web3.eth.Contract(abi, address);
-    //   this.setState({ contract: contract }); //this.setState({ contract}) //ES6
-    // } else {
-    //   window.alert("Smart contract not deployed to detected network");
-    // }
+    if (networkData) {
+      const abi = Loyalty.abi;
+      const address = networkData.address;
+      const contract = new web3.eth.Contract(abi, address);
+      this.setState({ contract: contract }); //this.setState({ contract}) //ES6
+      console.log("Contract");
+      console.log(this.state.contract);
+      console.log("Acoount");
+      console.log(this.state.account)
+
+    } else {
+      window.alert("Smart contract not deployed to detected network");
+    }
   };
+  
+//contract function call
+	//bookflight
+  bookFlight = (amount) => {
+    this.state.contract.methods.bookFlight(amount,this.state.account).send({from: this.state.account})
+  }
+  //bookhotel
+  bookHotel = (token) => {
+    this.state.contract.methods.bookHotel(token).send({from: this.state.account})
+  }
+
 
   loadEtherBalance = () => {
     const web3 = window.web3;

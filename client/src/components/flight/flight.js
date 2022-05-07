@@ -150,15 +150,15 @@ class Flight extends React.Component {
 
 
   updateTotalFare = () => {
-    if(this.state.source_name === this.state.destination_name) {
+    if (this.state.source_name === this.state.destination_name) {
       Alert.error('Source & destination cannot be the same')
       this.setState({
         total_price: 0,
         rewards: 0
       })
     }
-    if(
-      this.state.destination_name !== '' 
+    if (
+      this.state.destination_name !== ''
       && this.state.destination_price !== ''
       && this.state.source_name !== ''
       && this.state.source_price !== ''
@@ -179,7 +179,7 @@ class Flight extends React.Component {
   }
 
   bookFlight = async (total_price, rewards) => {
-    this.props.bookFlight(total_price);
+    this.props.bookFlight(rewards);
 
     const payload = {
       account_address: this.props.account,
@@ -197,21 +197,21 @@ class Flight extends React.Component {
     };
 
     try {
-      this.setState({loading: true})
+      this.setState({ loading: true })
       await axios({
         url: "http://localhost:9002/flight/booking",
         method: "POST",
         data: payload,
       })
-      .then(() => {
-        Alert.success('Flight booking successful!')
-        this.setState({open: false})
-        this.getFlightBookings();
-      }) 
+        .then(() => {
+          Alert.success('Flight booking successful!')
+          this.setState({ open: false })
+          this.getFlightBookings();
+        })
     } catch (error) {
-      Alert.error(error) 
+      Alert.error(error)
     }
-    this.setState({loading: false})
+    this.setState({ loading: false })
   };
 
   getFlightBookings = () => {
@@ -230,7 +230,7 @@ class Flight extends React.Component {
   };
 
   handleClose() {
-    this.setState({open: false})
+    this.setState({ open: false })
   }
 
   render() {
@@ -285,26 +285,26 @@ class Flight extends React.Component {
             </div>
             <div className="booking-row-internal__flight">
               <div className="form-fields">
-                  <p className="booking-title__flight">Flight Class</p>
-                  <select
-                    name="flight_class"
-                    className="form-floating form-select"
-                    id="class"
-                    aria-label=".form-select flight-class"
-                    onChange={this.changeHandler}
-                  >
-                    <option value={null} selected hidden disabled>
-                      Select your flight class
-                    </option>
-                    {this.state.flightClass.map((item, index) => {
-                      return (
-                        <option value={item.value} name={item.name} key={index}>
-                          {item.name}
-                        </option>
-                      )
-                    })}
-                  </select>
-                </div>
+                <p className="booking-title__flight">Flight Class</p>
+                <select
+                  name="flight_class"
+                  className="form-floating form-select"
+                  id="class"
+                  aria-label=".form-select flight-class"
+                  onChange={this.changeHandler}
+                >
+                  <option value={null} selected hidden disabled>
+                    Select your flight class
+                  </option>
+                  {this.state.flightClass.map((item, index) => {
+                    return (
+                      <option value={item.value} name={item.name} key={index}>
+                        {item.name}
+                      </option>
+                    )
+                  })}
+                </select>
+              </div>
               <div className="form-fields">
                 <p className="booking-title__flight">Journey Date</p>
                 <DatePicker
@@ -344,7 +344,7 @@ class Flight extends React.Component {
                 variant="contained"
                 name="Book Flight"
                 className="book-flight-btn"
-                onClick={()=>{this.setState({open:true})}}
+                onClick={() => { this.setState({ open: true }) }}
                 disabled={this.state.total_price === 0}
               >
                 Get Fare
@@ -363,7 +363,7 @@ class Flight extends React.Component {
           type="flight"
           handleClose={this.handleClose.bind(this)}
           open={this.state.open}
-          totalPrice={this.state.total_price} 
+          totalPrice={this.state.total_price}
           rewards_used={0}
           rewards={this.state.rewards}
           onClick={this.bookFlight.bind(this)} //bookFlight contract function must be written in LoggedIn.js
